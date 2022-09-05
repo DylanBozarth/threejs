@@ -1,4 +1,4 @@
-import {orbitControls} from './sources/three'
+import * as THREE from 'three';
 const scene = new THREE.Scene(); // scene is like a container that holds all the objects, cameras, etc.
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 ); // FOV | Aspect ratio | which objects are visible realtive to the camera 1-1000 range
 const renderer = new THREE.WebGLRenderer({
@@ -18,6 +18,10 @@ const pointLight = new THREE.AmbientLight(0xffffff);
 pointLight.position.set(20,20,20);
 // dont forget about light helpers
 
+// controls 
+const controls = new OrbitControls(camera, renderer.domElement); //l listen to mouse dom events and update camera
+
+
 // appending to the dom
 scene.add( cube );
 scene.add(pointLight);
@@ -28,6 +32,7 @@ const animate = function () {
 	cube.rotation.y += 0.05;
 	cube.rotation.z += 0.05;
 	renderer.render( scene, camera );
+	controls.update();
 };
 
 animate();
