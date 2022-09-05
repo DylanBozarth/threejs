@@ -1,4 +1,5 @@
-import * as THREE from 'three';
+ /* import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 const scene = new THREE.Scene(); // scene is like a container that holds all the objects, cameras, etc.
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 ); // FOV | Aspect ratio | which objects are visible realtive to the camera 1-1000 range
 const renderer = new THREE.WebGLRenderer({
@@ -37,3 +38,12 @@ const animate = function () {
 
 animate();
 //https://www.youtube.com/watch?v=Q7AOvWpIVHU&t=204s
+*/
+import React from 'react'
+const Animation = () => {
+
+	return (
+		<div>Yeah</div>
+	)
+
+}
