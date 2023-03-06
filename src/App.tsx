@@ -1,11 +1,11 @@
-import React from 'react';
 import './App.css';
+import {Monolith} from './animaton/monolith'
 
 function App() {
   return (
     <div className="App">
-      asdasd
-
+    <Monolith />
+    test
     </div>
   );
 }
